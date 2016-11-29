@@ -1,0 +1,27 @@
+<ion-view view-title="hots">
+    <div class="bar bar-subheader">
+        <ion-scroll direction="x" scrollbar-x="false">
+            <div class="button-bar hots-button-bar">
+                <a class="button button-clear select_button" ng-click="selectButton(20, 0)">资讯</a>
+                <a class="button button-clear" ng-click="selectButton(25, 1)">杂谈</a>
+                <a class="button button-clear" ng-click="selectButton(26, 2)">互联网</a>
+                <a class="button button-clear" ng-click="selectButton(27, 3)">财经</a>
+                <a class="button button-clear" ng-click="selectButton(28, 4)">娱乐</a>
+                <a class="button button-clear" ng-click="selectButton(29, 5)">体育</a>
+                <a class="button button-clear" ng-click="selectButton(29, 6)">教程</a>
+            </div>
+        </ion-scroll>
+
+    </div>
+    <ion-content class="has-subheader">
+        <ion-refresher pulling-text="下拉刷新..." spinner="bubbles" on-refresh="onRefresh()"></ion-refresher>
+        <ion-list>
+            <ion-item class="item-thumbnail-left" ng-repeat="hot in hotsData" href="#/tab/hotsDetail/{{hot.aid}}">
+                <img ng-if="hot.pic" ng-src="{{ imgUrl }}{{ hot.pic }}" alt="">
+                <img ng-if="!hot.pic" ng-src="img/ionic.png" alt="">
+                <h2>{{ hot.title }}</h2>
+            </ion-item>
+
+        </ion-list>
+    </ion-content>
+</ion-view>

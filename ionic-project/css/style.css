@@ -1,0 +1,79 @@
+/*首页*/
+
+.home-slide-box img{
+    width: 100%;
+}
+
+.slider-pager .slider-pager-page{
+    width: 35px;
+}
+
+.slider-pager{
+    bottom: 5px;
+}
+
+.home-content .col{
+    text-align: center;
+    font-size: 17px;
+}
+
+.home-content .icon{
+    font-size: 25px;
+}
+
+.col-1{
+    height: 150px;
+    padding-top: 25px;
+}
+
+.col-2{
+    height: 60px;
+    padding-top: 10px;
+}
+
+/*热点*/
+.hots-button-bar .button{
+    color: black;
+}
+
+ion-scroll{
+    width: 100%;
+    overflow-x: hidden !important;
+}
+
+.hots-button-bar{
+    width: 600px;
+}
+
+.hots-button-bar .select_button{
+    border-bottom-width: 4px;
+    border-bottom-color: blue;
+}
+
+/*热点详情*/
+.hotsDetail-Content img{
+    width: 100%;
+}
+
+/*社区*/
+
+/*我的*/
+.login-header{
+    text-align: center;
+}
+
+.login-avatar{
+    border-radius: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
