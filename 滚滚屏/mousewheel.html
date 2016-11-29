@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style type="text/css">
+        .box{width: 800px;height: 400px;border: 1px solid #000; margin-top: 40px;position: relative;}
+        div img{position: absolute; top:50%;left:50%; transition:all 1s;}
+        div.out img{margin-left: -1000px;opacity:0;}
+    </style>
+</head>
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="jquery.mousewheel.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var nowpage=0
+         $(document).mousewheel(function(e,d){
+            nowpage=nowpage-d
+            if(nowpage>4){nowpage=4}
+            if(nowpage<0){nowpage=0}
+            console.log(nowpage)
+         });   
+
+         $("button:eq(0)").click(function(event) {
+             $("div").removeClass('out')
+         });
+          $("button:eq(1)").click(function(event) {
+             $("div").addClass('out')
+         });
+    });
+
+</script>
+<body>
+    <button>进场</button>
+    <button>出场</button>
+    <div class="box out">
+        <img src="mingming.jpg" alt="" />
+    </div>
+</body>
+</html>
